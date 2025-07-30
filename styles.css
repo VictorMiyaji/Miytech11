@@ -1,0 +1,691 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Lexend+Exa:wght@100..900&family=Lexend+Mega:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*outline: 1px solid red;*/
+}
+
+body {
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #000000f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #b6b6b6;
+}
+
+h1,
+.cabecalho,
+.saibaMais p,
+.setaDireitaDescricao,
+.setaEsquerdaDescricao {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: pan-y;
+}
+
+.saibaMais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50vh;
+  padding: 1rem;
+  background-color: inherit;
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-family: "Sansation";
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+#iconeTelefoneSaibaMais {
+  font-size: 1rem;
+}
+
+#videoHeader {
+  position: absolute;
+  max-width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* SOBRE NÓS */
+
+h3 {
+  font-family: "Sansation";
+  font-size: 1.6em;
+}
+
+.containerSobreNos {
+  max-width: 100%;
+  min-height: 80vh;
+  padding: 3rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.867), rgba(0, 0, 0, 0.856)),
+    url("https://i.imgur.com/aLmcx26.jpeg") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  flex-wrap: wrap;
+  touch-action: pan-y;
+}
+
+.fraseSobreNos {
+  font-family: "Lexend Mega";
+  max-width: 65vw;
+  font-weight: 200;
+  font-size: 1em;
+  color: rgb(216, 215, 215);
+  line-height: 1.2;
+}
+
+/* SERVIÇOS */
+
+.containerServicos {
+  max-width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  touch-action: pan-y;
+}
+
+.containerServicos h3 {
+  padding: 2rem;
+}
+
+#boxCarrossel {
+  max-width: 100%;
+  min-height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#viewportServicos {
+  width: 70vw;
+  min-height: 30vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  /* sombra à esquerda */
+}
+
+#trackServicos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+  touch-action: pan-y;
+}
+
+.boxServicos {
+  flex: 0 0 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.caixote {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconeMaisFraseServico {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  color: rgb(219, 219, 219);
+}
+
+.icone {
+  font-size: 4rem;
+}
+
+.fraseServicos {
+  font-size: 1rem;
+  font-family: "Lexend Exa";
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.botaoSaibaMais {
+  text-align: center;
+  color: rgba(34, 205, 34, 0.936);
+  border: 1px solid rgba(34, 205, 34, 0.936);
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  padding: 0.4em 1.5em;
+  font-family: "Tomorrow";
+  transition: transform 0.3s ease-in-out;
+}
+
+.angleRight,
+.angleLeft {
+  max-width: 20vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  padding-inline: 1rem;
+}
+
+.angleLeft {
+  justify-content: flex-end;
+}
+
+.angleRight {
+  justify-content: flex-start;
+}
+
+/* DESCRIÇÃO */
+
+#containerDescricao {
+  display: none;
+  position: relative;
+  background: rgba(10, 25, 45, 0.7);
+  width: 70vw;
+  border-radius: 0 0 1rem 1rem;
+  transition: right 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+#videoDescricao {
+  display: none;
+}
+
+#fecharDescricao {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 3;
+}
+
+.boxDescricao {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+#tituloDescricao {
+  font-size: 1.5rem;
+  font-family: "Outfit";
+  color: #ffffff;
+}
+
+#textoDescricao {
+  font-size: 1rem;
+  font-family: "Outfit";
+  font-weight: 100;
+  line-height: 1.5rem;
+  color: #dcdbdb;
+}
+
+#textoDescricao p {
+  margin-block: 0.7rem;
+}
+
+/* FOOTER */
+
+footer {
+  min-height: 50vh;
+  width: 100%;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+  touch-action: pan-y;
+}
+
+.boxLogoInformacaoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logoFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+  margin-block: 1rem;
+}
+
+.imgLogoFooter {
+  width: 25vw;
+}
+
+.fraseBoxLogoFooter {
+  width: 50vw;
+}
+
+.boxContatoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.emailFooter,
+.telefoneFooter {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 1rem;
+  white-space: normal;
+  color: grey;
+}
+
+.boxLocalizacaoFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.localizacaoFooter {
+  width: 80%;
+  gap: 0.5rem;
+  color: grey;
+  text-align: center;
+}
+
+.endereco {
+  text-align: center;
+}
+
+.boxLocalizacaoFooter h5,
+.boxContatoFooter h5 {
+  font-family: "Sansation";
+  font-size: 1.2rem;
+  color: rgb(209, 207, 207);
+}
+
+.localizacaoFooter .endereco,
+.telefoneFooter p,
+.emailFooter p {
+  font-family: "Alexandria";
+  font-size: 0.8rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+iframe {
+  width: 30%;
+  border-radius: 2rem;
+}
+
+.copyrights {
+  text-align: center;
+  border-top: 1px solid rgba(184, 182, 182, 0.767);
+  font-family: "Alexandria";
+  font-size: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .saibaMais {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    font-family: "Sansation";
+    border-radius: 0.5rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
+  .saibaMais p {
+    display: block;
+  }
+  #iconeTelefoneSaibaMais {
+    display: none;
+  }
+  #viewportServicos {
+    background-color: black;
+    width: 80vw;
+  }
+  #trackServicos {
+    width: 100%;
+  }
+  .boxServicos {
+    flex: 0 0 calc(100% / 3);
+  }
+  .caixote {
+    width: 100%;
+  }
+  .fraseServicos {
+    font-size: 0.6rem;
+  }
+  #containerDescricao {
+    display: none;
+    width: 80vw;
+    height: 58vh;
+    max-height: 500px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(10, 25, 45, 0.7);
+    box-sizing: border-box;
+    transition: transform 1s ease;
+  }
+  #videoDescricao {
+    display: block;
+    height: 100%;
+    width: 41%;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    object-fit: fill;
+  }
+  .caixoteDescricao {
+    min-height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .boxDescricao {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 2rem 1rem 1rem;
+    overflow: auto;
+  }
+
+  .boxDescricao::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .boxDescricao::-webkit-scrollbar-track {
+    background: #000000f5;
+  }
+
+  .boxDescricao::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 5px;
+  }
+
+  .boxDescricao::-webkit-scrollbar-thumb:hover {
+    background: #b6b6b6;
+  }
+  #fecharDescricao {
+    top: 1rem;
+    right: 1rem;
+  }
+  #tituloDescricao {
+    width: 95%;
+  }
+  #textoDescricao {
+    width: 90%;
+  }
+  .boxLocalizacaoFooter h5,
+  .boxContatoFooter h5 {
+    font-size: 1.3rem;
+  }
+  .localizacaoFooter .endereco,
+  .telefoneFooter p,
+  .emailFooter p {
+    font-size: 1rem;
+  }
+
+  .imgLogoFooter {
+    width: 17vw;
+  }
+
+  .fraseBoxLogoFooter {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1023px) {
+  header {
+    align-items: flex-start;
+  }
+  .cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3.5rem;
+    padding-top: 1rem;
+  }
+  .nomeLogoHeader {
+    max-width: 120px;
+    padding: 1.3rem;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    font-family: "Poiret One";
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-right: 2rem;
+  }
+  .menu a {
+    color: #a8a7a7;
+    letter-spacing: 0.1rem;
+  }
+  .saibaMais {
+    display: none;
+  }
+  #boxCarrossel {
+    display: none;
+  }
+  .containerServicos {
+    min-height: 90vh;
+  }
+  .containerServicos h3 {
+    margin-top: 2rem;
+  }
+  .setaDireitaDescricao,
+  .setaEsquerdaDescricao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 5vw;
+    font-size: 2rem;
+  }
+  .setasMaisContainerDescricao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #containerDescricao {
+    width: 70vw;
+    height: 70vh;
+    background: linear-gradient(to bottom, #666666, #666666);
+    display: block;
+    max-height: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 1px 4px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  #fecharDescricao {
+    display: none;
+  }
+  .caixoteDescricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  #tituloDescricao {
+    width: 100%;
+    font-size: 2rem;
+  }
+  #textoDescricao {
+    width: 100%;
+  }
+  footer {
+    width: 100vw;
+    height: 50vh;
+  }
+  .boxLogoInformacaoFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15vw;
+  }
+  .logoFooter {
+    width: 20%;
+  }
+  .imgLogoFooter {
+    max-width: 100px;
+  }
+  .fraseBoxLogoFooter {
+    max-width: 200px;
+  }
+  .boxInformacaoFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .boxContatoFooter {
+    width: 40%;
+  }
+  .boxLocalizacaoFooter {
+    width: 75%;
+  }
+  .localizacaoFooter .endereco,
+  .telefoneFooter p,
+  .emailFooter p {
+    font-size: 0.7rem;
+  }
+  .boxLocalizacaoFooter h5,
+  .boxContatoFooter h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .saibaMais:hover {
+    color: rgba(34, 205, 34, 0.936);
+    border: 1px solid rgb(44, 246, 84);
+    transform: scale(1.1);
+  }
+
+  .boxServicos:hover .iconeMaisFraseServico {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .boxServicos:hover .botaoSaibaMais {
+    border: 1px solid #00ff7f;
+    color: #00ff7f;
+    cursor: pointer;
+  }
+
+  .angleRight:hover i,
+  .angleLeft:hover i {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transform: scale(1.7);
+  }
+
+  .localizacaoFooter:hover,
+  .telefoneFooter:hover,
+  .emailFooter:hover {
+    color: white;
+  }
+  .menu a:hover {
+    color: white;
+  }
+}
+.setaDireitaDescricao:hover,
+.setaEsquerdaDescricao:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transform: scale(1.7);
+}
